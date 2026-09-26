@@ -16,13 +16,13 @@ apply plugin: 'java'
 group = 'com.github.NeRdTheNed.jSus'
 
 final def compiler = javaToolchains.compilerFor {
-    languageVersion = JavaLanguageVersion.of(8)
+    languageVersion = JavaLanguageVersion.of(21)
 }
 
 // Tells Gradle to use the previously defined Java 8 compatible JDK.
 java {
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
     toolchain {
         compiler
     }
@@ -31,8 +31,8 @@ java {
 // Tells Gradle to always compile with the previously defined Java 8 compatible JDK.
 tasks.withType(JavaCompile).configureEach {
     javaCompiler = compiler
-    sourceCompatibility = 1.8
-    targetCompatibility = 1.8
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
     // Tells Gradle to include more debug information in compiled .class files.
     options.debug = true
     options.debugOptions.debugLevel = 'source,lines,vars'
@@ -66,33 +66,33 @@ build.finalizedBy(jartighten)
 
 dependencies {
     // asm
-    api 'org.ow2.asm:asm:9.5'
-    api 'org.ow2.asm:asm-tree:9.5'
-    api 'org.ow2.asm:asm-util:9.5'
+    api 'org.ow2.asm:asm:9.10.1'
+    api 'org.ow2.asm:asm-tree:9.10.1'
+    api 'org.ow2.asm:asm-util:9.10.1'
 
-    api 'info.picocli:picocli:4.7.5'
-    annotationProcessor 'info.picocli:picocli-codegen:4.7.5'
+    api 'info.picocli:picocli:4.7.7'
+    annotationProcessor 'info.picocli:picocli-codegen:4.7.7'
 
-    api 'com.github.Col-E:CAFED00D:1.10.2'
-    api 'org.slf4j:slf4j-api:2.0.9'
-    api 'org.slf4j:slf4j-jdk14:2.0.9'
+    api 'com.github.Col-E:CAFED00D:2.6.7'
+    api 'org.slf4j:slf4j-api:2.0.20'
+    api 'org.slf4j:slf4j-jdk14:2.0.20'
 
     api 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 
     // TODO: SSVM
     //api 'com.github.xxdark:ssvm:1.9.0.3'
 
-    shadow 'org.ow2.asm:asm:9.5'
-    shadow 'org.ow2.asm:asm-tree:9.5'
-    shadow 'org.ow2.asm:asm-util:9.5'
+    shadow 'org.ow2.asm:asm:9.10.1'
+    shadow 'org.ow2.asm:asm-tree:9.10.1'
+    shadow 'org.ow2.asm:asm-util:9.10.1'
 
-    shadow 'info.picocli:picocli:4.7.5'
+    shadow 'info.picocli:picocli:4.7.7'
 
-    shadow 'com.github.Col-E:CAFED00D:1.10.2'
-    shadow 'org.slf4j:slf4j-api:2.0.9'
-    shadow 'org.slf4j:slf4j-jdk14:2.0.9'
+    shadow 'com.github.Col-E:CAFED00D:2.6.7'
+    shadow 'org.slf4j:slf4j-api:2.0.20'
+    shadow 'org.slf4j:slf4j-jdk14:2.0.20'
 
-    shadow 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    shadow 'com.fasterxml.jackson.core:jackson-databind:2.22.3'
 
     //shadow 'com.github.xxdark:ssvm:1.9.0.3'
 }

@@ -28,10 +28,10 @@ import org.objectweb.asm.tree.MethodInsnNode;
 import org.objectweb.asm.tree.TypeInsnNode;
 import org.objectweb.asm.util.Printer;
 
-import me.coley.cafedude.classfile.ClassFile;
-import me.coley.cafedude.io.ClassFileReader;
-import me.coley.cafedude.io.ClassFileWriter;
-import me.coley.cafedude.transform.IllegalStrippingTransformer;
+import software.coley.cafedude.classfile.ClassFile;
+import software.coley.cafedude.io.ClassFileReader;
+import software.coley.cafedude.io.ClassFileWriter;
+import software.coley.cafedude.transform.IllegalStrippingTransformer;
 
 public final class Util {
     /** Private constructor to hide the default one */
