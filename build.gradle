@@ -77,7 +77,7 @@ dependencies {
     api 'org.slf4j:slf4j-api:2.0.20'
     api 'org.slf4j:slf4j-jdk14:2.0.20'
 
-    api 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
+    api 'tools.jackson.core:jackson-databind:3.2.3'
 
     // TODO: SSVM
     //api 'com.github.xxdark:ssvm:1.9.0.3'
@@ -92,7 +92,7 @@ dependencies {
     shadow 'org.slf4j:slf4j-api:2.0.20'
     shadow 'org.slf4j:slf4j-jdk14:2.0.20'
 
-    shadow 'com.fasterxml.jackson.core:jackson-databind:2.22.3'
+    shadow 'tools.jackson.core:jackson-databind:3.2.3'
 
     //shadow 'com.github.xxdark:ssvm:1.9.0.3'
 }
